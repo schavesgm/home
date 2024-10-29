@@ -1,0 +1,3 @@
+#!/bin/bash
+# Script to allow connecting to google VMs using standard SSH keys for a given project
+gcloud compute config-ssh --ssh-key-file=$HOME/.ssh/id_ed25519 --project ${1}
