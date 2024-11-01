@@ -18,6 +18,7 @@
 
     # Install some terminal applications
     pkgs.git
+    pkgs.eza
     pkgs.glow
     pkgs.ripgrep
     pkgs.csvlens
@@ -51,6 +52,7 @@
 
     shellAliases = {
       "vim" = "nvim";
+      "ls" = "eza --icons";
     };
 
     oh-my-zsh = {
