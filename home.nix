@@ -1,4 +1,6 @@
-{ lib, inputs, pkgs, username, ... }: {
+{ lib, pkgs, inputs, username, ... }: {
+  imports = [ ./modules/shell.nix ];
+
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = username;
   home.homeDirectory = "/home/${username}";
@@ -18,7 +20,6 @@
 
     # Install some terminal applications
     pkgs.git
-    pkgs.eza
     pkgs.glow
     pkgs.ripgrep
     pkgs.csvlens
@@ -42,29 +43,6 @@
 
   # Enable font configuration
   fonts.fontconfig.enable = true;
-
-  # Install zsh and make it the default shell
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-
-    shellAliases = {
-      "vim" = "nvim";
-      "ls" = "eza --icons";
-    };
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" ];
-    };
-  };
-
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage plain files is
   # through 'home.file'.
