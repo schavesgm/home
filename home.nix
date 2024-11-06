@@ -20,11 +20,10 @@
 
     # Install some terminal applications
     pkgs.git
+    pkgs.htop
     pkgs.glow
-    pkgs.ripgrep
     pkgs.csvlens
     pkgs.google-cloud-sdk-gce
-    pkgs.yazi
     pkgs.pixi
     pkgs.uv
 
