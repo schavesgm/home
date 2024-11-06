@@ -20,7 +20,8 @@
 
     # Install some terminal applications
     pkgs.git
-    pkgs.htop
+    pkgs.bottom
+    pkgs.fzf
     pkgs.glow
     pkgs.csvlens
     pkgs.google-cloud-sdk-gce
