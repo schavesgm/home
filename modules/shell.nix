@@ -4,6 +4,8 @@
     vim = "nvim";
     ls = "eza --icons";
     lg = "lazygit";
+    cd = "z";
+    cat = "bat";
   };
 
   # Install zsh and make it the default shell
@@ -14,7 +16,7 @@
     syntaxHighlighting.enable = true;
 
     # Add some extra configuration to the .zshrc file
-    initExtra = ''export PATH=$PATH:$HOME/.cargo/bin'';
+    envExtra = ''export PATH=$PATH:$HOME/.cargo/bin'';
 
     oh-my-zsh = {
       enable = true;
@@ -28,11 +30,15 @@
     enableZshIntegration = true;
   };
 
-  programs.yazi.enable = true;
   programs.atuin.enable = true;
+  programs.fzf.enable = true;
+  programs.bat.enable = true;
+  programs.zoxide.enable = true;
+  programs.yazi.enable = true;
   programs.eza.enable = true;
   programs.lazygit.enable = true;
   programs.ripgrep.enable = true;
+
   programs.gh = {
     enable = true;
     gitCredentialHelper = {
