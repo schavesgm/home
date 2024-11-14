@@ -35,7 +35,7 @@
 
     # Install some fonts in the configuration
     pkgs.noto-fonts
-    (pkgs.nerdfonts.override { fonts = ["IosevkaTermSlab"]; })
+    pkgs.nerd-fonts.iosevka-term-slab
     
     # Install some custom scripts
     (pkgs.writeShellScriptBin "update_gcloud_ssh" (lib.readFile ./scripts/update_gcloud_ssh))
