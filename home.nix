@@ -25,6 +25,7 @@
     pkgs.glow
     pkgs.csvlens
     pkgs.google-cloud-sdk-gce
+    pkgs.awscli2
     pkgs.pixi
     pkgs.uv
 
@@ -32,6 +33,7 @@
     pkgs.firefox
     pkgs.slack
     pkgs.zotero_7
+    pkgs.vscode
 
     # Install some fonts in the configuration
     pkgs.noto-fonts
